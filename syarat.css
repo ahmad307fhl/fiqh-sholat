@@ -45,11 +45,37 @@ header {
     z-index: 1000;
     
 }
-@media (max-width: 768px) {
-    .logo-box:hover .logo {
-        width: 80px;
-        height: 80px;
-    }
+@media (max-width: 600px) {
+      header {
+    display: flex; /* tambahin ini biar jalan */
+    flex-direction: column !important;
+    padding: 10px; /* udah dikasih ; */
+    text-align: center; /* udah dikasih ; */
+    gap: 10px; /* kasih jarak antara judul dan menu */
+  }
+  
+  header h1 {
+    font-size: 24px !important;
+    margin: 5px 0;
+  }
+  
+  header nav {
+    display: flex; /* bikin nav jadi flex juga */
+    flex-direction: column; /* menu turun ke bawah */
+  }
+
+  header nav a {
+    display: block;
+    margin: 5px 0;
+    padding: 8px; /* biar gampang di pencet di HP */
+  }
+
+  .logo {
+    width: 80px !important; /* kecilin logo di HP */
+    height: 80px !important;
+    position: static !important; /* biar gak nempel */
+    margin: 0 auto;
+  }
 }
 
 nav {
